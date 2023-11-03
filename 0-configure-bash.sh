@@ -11,4 +11,5 @@ git config --global user.name $gitusername
 read -p 'git user.email: ' gituseremail
 git config --global user.email $gituseremail
 git config --global core.autocrlf input
+git config --global core.editor 'vim'
 zsh ./1-configure-zsh.sh
