@@ -1,5 +1,11 @@
 #!/usr/bin/zsh
 
+mkdir -p "$HOME/.config"
+mkdir -p "$HOME/.cache"
+mkdir -p "$HOME/.local/share"
+mkdir -p "$HOME/.local/state"
+mkdir -p "$HOME/.local/bin"
+
 git clone --recursive https://github.com/ekenalt/prezto.git "${ZDOTDIR:-$HOME}/.zprezto"
 
 setopt EXTENDED_GLOB
