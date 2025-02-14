@@ -2,7 +2,7 @@
 
 sudo apt update
 sudo apt install git wget curl zsh build-essential neovim extrepo -y
-if test -f /proc/sys/fs/binfmt_misc/WSLInterop
+if grep -iq "microsoft" /proc/version
 then
   echo '\n[interop]\nappendWindowsPath=false' | sudo tee -a /etc/wsl.conf
 fi
