@@ -13,7 +13,7 @@ setopt EXTENDED_GLOB
 ZSHRC_PATH="${ZDOTDIR:-$HOME}"/.zprezto/runcoms/zshrc
 SOURCE_ZSH_WSL_SED_ARGUMENT='s|# Source .zsh_wsl||g'
 
-if test -f /proc/sys/fs/binfmt_misc/WSLInterop
+if grep -iq "microsoft" /proc/version
 then
   SOURCE_ZSH_WSL_SED_ARGUMENT='s|# Source .zsh_wsl|# Source .zsh_wsl\nif [[ -s "${ZDOTDIR:-$HOME}/.zsh_wsl" ]]; then\n  source "${ZDOTDIR:-$HOME}/.zsh_wsl"\nfi|g'
 else
